@@ -4,6 +4,8 @@
 // (c) 2011 Andrew Nesbitt [andrewnez@gmail.com]
 // released under the MIT license
 
+var _gaq = _gaq || []
+
 Split = (function(){
 
   var config = {},
@@ -70,7 +72,6 @@ Split = (function(){
       alternative = keys[Math.floor(Math.random()*keys.length)]
       createCookie(config.cookieName, alternative, config.cookieAge)
     }
-    var _gaq = _gaq || [];
     _gaq.push(['_setCustomVar', config.customVariableIndex, config.customVariableName, alternative, 1]);
     alternatives[alternative]();
   }
