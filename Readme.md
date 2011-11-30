@@ -6,6 +6,10 @@ Currently split.js uses google analytics as the datastore for experiments, this 
 
 ## Usage
 
+Basic Usage:
+
+    Split.setup(alternatives, options)
+
 Split.js is useful for running different functions and measuring the results, you define the alternatives that you wish to test:
 
     Split.setup({
@@ -19,6 +23,19 @@ Split.js is useful for running different functions and measuring the results, yo
 
 When a user hits the page they will be randomly assigned one alternative and that function will be executed.
 A custom variable will be set in google analytics with the name of that alternative which you can then pivot your analytics data around.
+
+## Options
+
+There are a number of configurable options that can be parsed as an optional second argument:
+
+    Split.setup({
+      // functions
+    },{
+      cookieName: 'abTest',
+      cookieAge: 30,
+      customVariableName: 'AB Test alternative',
+      customVariableIndex: 1
+    });
 
 ## Caveats
 

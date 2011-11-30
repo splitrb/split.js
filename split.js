@@ -5,6 +5,15 @@
 // released under the MIT license
 
 Split = (function(){
+
+  var config = {},
+      defaults = {
+        cookieName: 'abTest',
+        cookieAge: 30,
+        customVariableName: 'AB Test alternative',
+        customVariableIndex: 1
+     }
+
   function createCookie(name,value,days) {
     if (days) {
       var date = new Date();
@@ -42,21 +51,32 @@ Split = (function(){
 
   function init(){
     alternatives = arguments[0]
+    options = arguments[1]
     keys = alternatives.keys()
 
-    var alternative = readCookie('abTest')
+    config = {}
+
+    if(options != undefined){
+      for(k in defaults){
+        config[k] = (options[k] != undefined) ? options[k] : defaults[k];
+      }
+    }else{
+      config = defaults;
+    }
+
+    var alternative = readCookie(config.cookieName)
     if (alternative) {
     } else {
       alternative = keys[Math.floor(Math.random()*keys.length)]
-      createCookie('abTest', alternative, 30)
+      createCookie(config.cookieName, alternative, config.cookieAge)
     }
     var _gaq = _gaq || [];
-    _gaq.push(['_setCustomVar', 1, 'AB Test alternative', alternative, 1]);
+    _gaq.push(['_setCustomVar', config.customVariableIndex, config.customVariableName, alternative, 1]);
     alternatives[alternative]();
   }
   return {
-    setup: function(args){
-      init(args)
+    setup: function(args, options){
+      init(args, options)
       }
     }
 })();
