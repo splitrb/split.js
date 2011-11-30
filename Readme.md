@@ -4,7 +4,7 @@ Split.js is a clientside A/B testing library.
 
 Currently split.js uses google analytics as the datastore for experiments, this may be extended to handle multiple data stores in the future.
 
-# Usage
+## Usage
 
 Split.js is useful for running different functions and measuring the results, you define the alternatives that you wish to test:
 
@@ -20,7 +20,7 @@ Split.js is useful for running different functions and measuring the results, yo
 When a user hits the page they will be randomly assigned one alternative and that function will be executed.
 A custom variable will be set in google analytics with the name of that alternative which you can then pivot your analytics data around.
 
-# Caveats
+## Caveats
 
 * `Split.setup` must be loaded before Google analytics otherwise the custom variable will not be tracked,
 it may not work inside `$(document).bind("ready", handler)` or an async loader.
