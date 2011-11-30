@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A/B Testing</title>
+    <script type="text/javascript" src='split.js'></script>
+    <script type="text/javascript" charset="utf-8">
+      Split.setup({
+        'a': function(){
+          // control, do nothing
+        },
+        'b': function(){
+          document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('heading').innerHTML = 'Chunky Bacon';
+          }, false);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id='heading'>Hi!</h1>
+  </body>
+</html>
