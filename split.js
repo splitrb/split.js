@@ -4,7 +4,6 @@
 // (c) 2011 Andrew Nesbitt [andrewnez@gmail.com]
 // released under the MIT license
 
-
 Split = (function(){
   function createCookie(name,value,days) {
     if (days) {
@@ -41,7 +40,7 @@ Split = (function(){
     return keys;
   }
 
-  function setup(){
+  function init(){
     alternatives = arguments[0]
     keys = alternatives.keys()
 
@@ -56,4 +55,9 @@ Split = (function(){
     _gaq.push(['_setCustomVar', 1, 'AB Test alternative', alternative, 1]);
     alternatives[alternative]();
   }
+  return {
+    setup: function(args){
+      init(args)
+      }
+    }
 })();
