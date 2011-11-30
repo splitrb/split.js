@@ -46,7 +46,6 @@ Split = (function(){
 
     var alternative = readCookie('abTest')
     if (alternative) {
-      console.log('found existing cookie')
     } else {
       alternative = keys[Math.floor(Math.random()*keys.length)]
       createCookie('abTest', alternative, 30)
