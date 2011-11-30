@@ -1,5 +1,5 @@
 // Split.js, Clientside A/B testing library
-// v0.1.0
+// v0.1.1
 // http://github.com/andrew/split.js
 // (c) 2011 Andrew Nesbitt [andrewnez@gmail.com]
 // released under the MIT license
