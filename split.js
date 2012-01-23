@@ -41,10 +41,10 @@ Split = (function(){
     createCookie(name,"",-1);
   }
 
-  Object.prototype.keys = function ()
+  function getKeys(obj)
   {
     var keys = [];
-    for(var i in this) if (this.hasOwnProperty(i))
+    for(var i in obj) if (obj.hasOwnProperty(i))
     {
       keys.push(i);
     }
@@ -54,7 +54,7 @@ Split = (function(){
   function init(){
     alternatives = arguments[0]
     options = arguments[1]
-    keys = alternatives.keys()
+    keys = getKeys(alternatives);
 
     config = {}
 
