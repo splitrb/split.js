@@ -56,4 +56,4 @@ it may not work inside `$(document).bind("ready", handler)` or an async loader.
 
 ## Copyright
 
-Copyright (c) 2013 Andrew Nesbitt. See [LICENSE](https://github.com/andrew/split.js/blob/master/LICENSE) for details.
+Copyright (c) 2013 Andrew Nesbitt. See [LICENSE](https://github.com/splitrb/split.js/blob/master/LICENSE) for details.
