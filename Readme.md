@@ -1,8 +1,12 @@
 # Split.js
 
-Split.js is a clientside A/B testing library.
+> 📉 Clientside A/B testing library
 
-Currently split.js uses google analytics as the datastore for experiments, this may be extended to handle multiple data stores in the future.
+Currently split.js uses Google Analytics as the datastore for experiments, this may be extended to handle multiple data stores in the future.
+
+## Install
+
+Put this file somewhere in your dependency path.
 
 ## Usage
 
@@ -46,6 +50,10 @@ it may not work inside `$(document).bind("ready", handler)` or an async loader.
 
 * You can provide as many alternatives as you like but sample size will be much lower and take longer to show real results.
 
+## Contribute
+
+Please conform to the [Code of Conduct](CODE_OF_CONDUCT.md).
+
 ### Note on Patches/Pull Requests
 
  * Fork the project.
@@ -54,6 +62,6 @@ it may not work inside `$(document).bind("ready", handler)` or an async loader.
    (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
  * Send me a pull request. Bonus points for topic branches.
 
-## Copyright
+## License
 
-Copyright (c) 2013 Andrew Nesbitt. See [LICENSE](https://github.com/splitrb/split.js/blob/master/LICENSE) for details.
+Copyright (c) 2013-2018 Andrew Nesbitt. See [LICENSE](https://github.com/splitrb/split.js/blob/master/LICENSE) for details.
