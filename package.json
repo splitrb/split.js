@@ -1,0 +1,25 @@
+{
+  "name": "split-testing",
+  "version": "1.0.0",
+  "description": "📉 Clientside A/B testing library",
+  "main": "split.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/splitrb/split.js.git"
+  },
+  "keywords": [
+    "split",
+    "ab",
+    "testing",
+    "clientside"
+  ],
+  "author": "Andrew Nesbitt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/splitrb/split.js/issues"
+  },
+  "homepage": "https://github.com/splitrb/split.js#readme"
+}
